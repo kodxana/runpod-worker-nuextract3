@@ -1,0 +1,7 @@
+boto3==1.43.49
+httpx==0.28.1
+jsonschema==4.26.0
+Pillow==12.3.0
+pypdfium2 @ https://files.pythonhosted.org/packages/09/fd/e5ee6e1751478fd61860f3e28b3424f75322a88db2a7ecb930985004743a/pypdfium2-5.12.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=09c48c1b2a27d5a6fd40be2a97ea8850dd05b562d9524d699075f34f4ef80646
+pytest==9.1.1
+ruff==0.15.21

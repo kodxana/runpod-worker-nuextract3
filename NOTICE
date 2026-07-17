@@ -1,0 +1,8 @@
+NuExtract3 Runpod Worker
+Copyright 2026 NuExtract3 Runpod Worker contributors
+
+This product loads the NuMind NuExtract3 model at runtime. The model is not
+distributed with this source repository or baked into its container image.
+NuExtract3 is licensed separately under the Apache License 2.0.
+
+See THIRD_PARTY_NOTICES.md for upstream projects and license links.

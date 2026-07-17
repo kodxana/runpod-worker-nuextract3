@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools==80.10.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "runpod-worker-nuextract3"
+version = "0.1.0"
+description = "Bounded queue-based Runpod worker for NuMind NuExtract3"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "Apache-2.0"
+authors = [{ name = "NuExtract3 Runpod Worker contributors" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "accelerate==1.14.0",
+  "boto3==1.43.49",
+  "causal-conv1d @ https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.6.2.post1/causal_conv1d-1.6.2.post1%2Bcu12torch2.10cxx11abiTRUE-cp312-cp312-linux_x86_64.whl#sha256=c16c1c48d4fa63415cc797e02d69f97248c57c04627d99e394d5bb0ef266e288",
+  "click==8.3.1",
+  "flash-linear-attention[cuda]==0.5.1",
+  "huggingface-hub==1.5.0",
+  "httpx==0.28.1",
+  "jsonschema==4.26.0",
+  "Pillow==12.3.0",
+  "pypdfium2 @ https://files.pythonhosted.org/packages/09/fd/e5ee6e1751478fd61860f3e28b3424f75322a88db2a7ecb930985004743a/pypdfium2-5.12.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=09c48c1b2a27d5a6fd40be2a97ea8850dd05b562d9524d699075f34f4ef80646",
+  "runpod==1.10.1",
+  "torch==2.10.0",
+  "torchvision==0.25.0",
+  "transformers==5.5.4",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [".podman-*", ".tmp"]
+
+[tool.ruff.lint]
+select = ["B", "E4", "E7", "E9", "F", "I", "SIM", "UP"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-config --strict-markers"
+pythonpath = ["src"]
+testpaths = ["tests"]
