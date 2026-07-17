@@ -309,23 +309,6 @@ These limits are constants and cannot be weakened with environment variables.
 | `NUEXTRACT_DEFAULT_TOP_K` | No | Endpoint top-k default from 0 to 100; default 0 |
 | `NUEXTRACT_DEFAULT_SEED` | No | Endpoint sampling seed from 0 to 2,147,483,647; default 0 |
 
-Generation precedence is: fixed worker defaults, then endpoint environment
-defaults configured in the Runpod console, then explicit `input.generation`
-values on an individual job. This lets an endpoint owner establish normal model
-behavior while callers can override only the bounded fields present in the job
-schema. Fixed model identity, context/resource limits, concurrency, and runtime
-optimization choices cannot be changed by either layer.
-
-An empty source allowlist permits any host that resolves only to globally
-routable addresses. Custom S3 endpoints always require an exact allowlist entry.
-Source and custom endpoint URLs must use HTTPS on port 443. Credentials,
-fragments, redirects, compressed HTTP bodies, and non-public DNS answers are
-rejected.
-
-Legacy endpoint configurations may still set `MODEL_NAME` or `MODEL_ID`. They
-are not needed for the baked model, and the worker only accepts the fixed
-`numind/NuExtract3` value when either variable is present.
-
 
 ## Build and Run
 
