@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "name": "text_structured_extraction",
+      "input": {
+        "schema_version": "1",
+        "mode": "structured",
+        "sources": [
+          {
+            "type": "text",
+            "text": "The customer name is Ada Lovelace."
+          }
+        ],
+        "template": {
+          "customer_name": "verbatim-string"
+        },
+        "generation": {
+          "thinking": false,
+          "return_reasoning": false,
+          "max_new_tokens": 256,
+          "temperature": 0,
+          "top_p": 1.0,
+          "top_k": 0,
+          "seed": 0
+        }
+      },
+      "timeout": 900000
+    }
+  ],
+  "config": {
+    "gpuTypeId": "NVIDIA GeForce RTX 4090",
+    "gpuCount": 1,
+    "allowedCudaVersions": ["13.0", "12.9", "12.8"]
+  }
+}

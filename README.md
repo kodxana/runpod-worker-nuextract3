@@ -1,5 +1,7 @@
 # NuExtract3 Runpod Worker
 
+[![Runpod](https://api.runpod.io/badge/kodxana/runpod-worker-nuextract3)](https://console.runpod.io/hub/kodxana/runpod-worker-nuextract3)
+
 A queue-based Runpod Serverless worker for
 [`numind/NuExtract3`](https://huggingface.co/numind/NuExtract3). It performs
 structured extraction, document-to-Markdown conversion, and extraction-template
